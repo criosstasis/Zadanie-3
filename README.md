@@ -29,50 +29,39 @@
 ## Задание 1
 ### Предложите вариант изменения найденных переменных для 10 уровней в игре. Визуализируйте изменение уровня сложности в таблице. 
 Ход работы:
-- Было выбранно 3 переменные, которые влияют на сложность игры. Переменная Speed влияет на скорость перемещения дракона. Time between egg drops влияет на частоту сброса яиц драконом.
+- Было выбранно 3 переменные, которые влияют на сложность игры. Переменная Speed влияет на скорость перемещения дракона. Time between egg drops влияет на частоту сброса яиц драконом. Изменения Этих параметров между уровнями сложности представлены в таблице
 
-| Speed | Time between egg drops | Change Direction |
-| ------ | ------ | ------ |
-| 4 | 2 | 0,01 |
-|4.5| 1,8 | 0,012 |
-| 5  | 1,6 | 0,014 |
-| 5,5 | 1,4 | 0,016 |
-| 6 | 1,2 | 0,018 |
-|6,5 | 1 | 0,02 |
-| 7 | 0,8 | 0,022 |
-|7,5 | 0,6 | 0,024 |
-|8 | 0,4 | 0,026 |
-|8,5 | 0,2 | 0,028 |
+|Уровень сложности| Speed | Time between egg drops | Change Direction |
+| ------ | ------ | ------ | ------ |
+|1| 4 | 2 | 0,01 |
+|2|4.5| 1,8 | 0,012 |
+|3| 5  | 1,6 | 0,014 |
+|4| 5,5 | 1,4 | 0,016 |
+|5| 6 | 1,2 | 0,018 |
+|6|6,5 | 1 | 0,02 |
+|7| 7 | 0,8 | 0,022 |
+|8|7,5 | 0,6 | 0,024 |
+|9|8 | 0,4 | 0,026 |
+|10|8,5 | 0,2 | 0,028 |
 
-- Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
 
 
 ## Задание 2
 ### Создайте 10 сцен на Unity с изменяющимся уровнем сложности.
+Ход работы:
+- Было создано 10 сцен в Unity, где в соответствии с таблицей были изменены параметры. Картинки, на которых показаны эти изменения, представлены ниже.
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок2.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок3.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок4.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок5.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок6.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок7.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок8.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок9.PNG)
+![Иллюстрация к проекту](https://github.com/criosstasis/Zadanie-3/blob/main/Снимок10.PNG)
 
 
-
-```py
-
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
-
-```
 
 ## Задание 3
 ### Решение должно заполнять google-таблицу данными из Python. В Python данные также должны быть визуализированы.
